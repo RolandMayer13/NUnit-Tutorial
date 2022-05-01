@@ -128,78 +128,72 @@ namespace CustomerOrderService.Tests {
     private static IEnumerable<CustomerOrderServiceTestCase> CustomerOrderServiceTestCases() {
       return new List<CustomerOrderServiceTestCase> {
         new CustomerOrderServiceTestCase {
-          Customer = new CustomerTestCase(CustomerType.Basic),
-          Order = new OrderTestCase(100),
+          Customer = new Customer {
+            CustomerType = CustomerType.Basic
+          },
+          Order = new Order {
+            Amount = 100
+          },
           ExpectedAmountAfterDiscount = 100,
         },
         new CustomerOrderServiceTestCase {
-          Customer = new CustomerTestCase(CustomerType.Basic),
-          Order = new OrderTestCase(150),
+          Customer = new Customer {
+            CustomerType = CustomerType.Basic
+          },
+          Order = new Order {
+            Amount = 150
+          },
           ExpectedAmountAfterDiscount = 150,
         },
         new CustomerOrderServiceTestCase {
-          Customer = new CustomerTestCase(CustomerType.Premium),
-          Order = new OrderTestCase(100),
+          Customer = new Customer {
+            CustomerType = CustomerType.Premium
+          },
+          Order = new Order {
+            Amount = 100
+          },
           ExpectedAmountAfterDiscount = 90,
         },
         new CustomerOrderServiceTestCase {
-          Customer = new CustomerTestCase(CustomerType.Premium),
-          Order = new OrderTestCase(150),
+          Customer = new Customer {
+            CustomerType = CustomerType.Premium
+          },
+          Order = new Order {
+            Amount = 150
+          },
           ExpectedAmountAfterDiscount = 135,
         },
         new CustomerOrderServiceTestCase {
-          Customer = new CustomerTestCase(CustomerType.Special),
-          Order = new OrderTestCase(100),
+          Customer = new Customer {
+            CustomerType = CustomerType.Special
+          },
+          Order = new Order {
+            Amount = 100
+          },
           ExpectedAmountAfterDiscount = 80,
         },
         new CustomerOrderServiceTestCase {
-          Customer = new CustomerTestCase(CustomerType.Special),
-          Order = new OrderTestCase(150),
+          Customer = new Customer {
+            CustomerType = CustomerType.Special
+          },
+          Order = new Order {
+            Amount = 150
+          },
           ExpectedAmountAfterDiscount = 120,
         },
       }.AsEnumerable();
     }
     #endregion
 
-    #region CustomerOrderServiceTestCase classes
+    #region CustomerOrderServiceTestCase class
     public class CustomerOrderServiceTestCase {
       public Customer Customer { get; set; }
       public Order Order { get; set; }
       public decimal ExpectedAmountAfterDiscount { get; set; }
-      public CustomerOrderServiceTestCase() {
-        Customer = new Customer {
-          CustomerId = 1,
-          CustomerName = "Bill",
-          CustomerType = CustomerType.Basic,
-        };
-        Order = new Order {
-          OrderId = 1,
-          ProductId = 212,
-          ProductQuantity = 1,
-          Amount = 100,
-        };
-        ExpectedAmountAfterDiscount = 100;
-      }
+
       // Important! Override ToString( ) so tests will show in Test Explorer
       public override string ToString() {
         return $"{Customer.CustomerType}, {Order.Amount}, {ExpectedAmountAfterDiscount}";
-      }
-    }
-
-    public class CustomerTestCase : Customer {
-      public CustomerTestCase(CustomerType customerType) {
-        CustomerId = 1;
-        CustomerName = "Bill";
-        CustomerType = customerType;
-      }
-    }
-
-    public class OrderTestCase : Order {
-      public OrderTestCase(decimal amount) {
-        OrderId = 1;
-        ProductId = 212;
-        ProductQuantity = 1;
-        Amount = amount;
       }
     }
     #endregion
