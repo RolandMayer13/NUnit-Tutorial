@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderService", "Cus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderService.Tests", "CustomerOrderService.Tests\CustomerOrderService.Tests.csproj", "{AFB19B3C-F736-4E66-BAC1-E79106981A1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService", "AccountService\AccountService.csproj", "{71B71C2C-3537-46BE-80C7-B51AB945E5FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService.Tests", "AccountService.Tests\AccountService.Tests.csproj", "{7B861C45-18DB-48B7-91EE-F85D2712A8FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{AFB19B3C-F736-4E66-BAC1-E79106981A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFB19B3C-F736-4E66-BAC1-E79106981A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFB19B3C-F736-4E66-BAC1-E79106981A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B71C2C-3537-46BE-80C7-B51AB945E5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B71C2C-3537-46BE-80C7-B51AB945E5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B71C2C-3537-46BE-80C7-B51AB945E5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B71C2C-3537-46BE-80C7-B51AB945E5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B861C45-18DB-48B7-91EE-F85D2712A8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B861C45-18DB-48B7-91EE-F85D2712A8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B861C45-18DB-48B7-91EE-F85D2712A8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B861C45-18DB-48B7-91EE-F85D2712A8FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
